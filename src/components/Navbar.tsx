@@ -90,12 +90,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-potrancas-gold flex items-center gap-3" onClick={() => setIsOpen(!isOpen)}>
-            <div className="flex items-center gap-1 text-[10px] font-bold bg-white/5 px-2 py-1 rounded">
-              <span className={currentLang === 'es' ? 'text-potrancas-gold' : 'text-white/40'}>ES</span>
-              <span className="text-white/10">|</span>
-              <span className={currentLang === 'en' ? 'text-potrancas-gold' : 'text-white/40'}>EN</span>
-            </div>
+          <button className="md:hidden text-potrancas-gold" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
