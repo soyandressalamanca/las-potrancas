@@ -1,38 +1,41 @@
 import { motion } from 'motion/react';
 import { Utensils, Flame, Martini, Truck } from 'lucide-react';
-
-const products = [
-  {
-    title: 'Platillos Tradicionales',
-    description: 'Tacos, enchiladas, tamales, pozole y mole. Recetas que han pasado de generación en generación.',
-    image: '/hours_image.webp',
-    icon: Utensils,
-    color: 'text-potrancas-olive',
-  },
-  {
-    title: 'Chile Verde Premium',
-    description: 'Nuestra especialidad estrella. Un sabor auténtico y picante que define nuestra identidad.',
-    image: '/IMG_9828.JPG',
-    icon: Flame,
-    color: 'text-potrancas-red',
-  },
-  {
-    title: 'Bebidas y Cocteles',
-    description: 'Margaritas artesanales, micheladas y bebidas tradicionales para acompañar tu comida.',
-    image: '/events_image.webp',
-    icon: Martini,
-    color: 'text-potrancas-gold',
-  },
-  {
-    title: 'Paquetes de Catering',
-    description: 'Llevamos el sabor de Las Potrancas a tus fiestas privadas, empresas y celebraciones familiares.',
-    image: '/IMG_9829.JPG',
-    icon: Truck,
-    color: 'text-potrancas-cream',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Products() {
+  const { t } = useTranslation();
+
+  const products = [
+    {
+      title: t('products.p1.title'),
+      description: t('products.p1.desc'),
+      image: '/hours_image.webp',
+      icon: Utensils,
+      color: 'text-potrancas-olive',
+    },
+    {
+      title: t('products.p2.title'),
+      description: t('products.p2.desc'),
+      image: '/IMG_9828.JPG',
+      icon: Flame,
+      color: 'text-potrancas-red',
+    },
+    {
+      title: t('products.p3.title'),
+      description: t('products.p3.desc'),
+      image: '/events_image.webp',
+      icon: Martini,
+      color: 'text-potrancas-gold',
+    },
+    {
+      title: t('products.p4.title'),
+      description: t('products.p4.desc'),
+      image: '/IMG_9829.JPG',
+      icon: Truck,
+      color: 'text-potrancas-cream',
+    },
+  ];
+
   return (
     <section id="productos" className="section-padding bg-potrancas-black">
       <div className="max-w-7xl mx-auto">
@@ -43,7 +46,7 @@ export default function Products() {
             viewport={{ once: true }}
             className="text-potrancas-gold font-bold tracking-widest uppercase text-xs mb-4 block"
           >
-            Nuestra Selección
+            {t('products.badge')}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -52,7 +55,7 @@ export default function Products() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-potrancas-cream"
           >
-            Productos con <span className="italic text-potrancas-gold">Sabor Real</span>
+            {t('products.title')} <span className="italic text-potrancas-gold">{t('products.title_gold')}</span>
           </motion.h2>
         </div>
 
@@ -98,11 +101,11 @@ export default function Products() {
 
         <div className="mt-20 p-10 rounded-3xl bg-gradient-to-br from-potrancas-olive/20 to-potrancas-red/20 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
-            <h3 className="text-2xl font-bold mb-4">¿Listo para probar el sabor real?</h3>
-            <p className="text-potrancas-cream/70">Reserva tu mesa ahora y disfruta de la mejor comida mexicana en un ambiente acogedor. ¡Te esperamos!</p>
+            <h3 className="text-2xl font-bold mb-4">{t('products.cta_box.title')}</h3>
+            <p className="text-potrancas-cream/70">{t('products.cta_box.desc')}</p>
           </div>
           <a href="tel:3034322364" className="btn-primary whitespace-nowrap">
-            Reservar Ahora
+            {t('products.cta_box.btn')}
           </a>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronRight, MessageCircle, UtensilsCrossed } from 'lucide-react';
+import { ChevronRight, UtensilsCrossed } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const heroImages = ['/s1.webp', '/s2.webp', '/s3.webp'];
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -43,14 +45,14 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="inline-block py-1 px-4 rounded-full bg-potrancas-olive/20 text-potrancas-gold text-xs font-bold tracking-widest uppercase mb-6 border border-potrancas-olive/30">
-              Sabor Auténtico en Colorado
+              {t('hero.badge')}
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              Las Potrancas <br />
-              <span className="text-gradient italic">Mexican Restaurant</span>
+              {t('hero.title1')} <br />
+              <span className="text-gradient italic">{t('hero.title2')}</span>
             </h1>
             <p className="text-lg md:text-xl text-potrancas-cream/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-              La mejor comida mexicana en Colorado. Disfruta de nuestro legendario Green Chile y recetas tradicionales que te harán sentir como en casa.
+              {t('hero.subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -63,7 +65,7 @@ export default function Hero() {
                 className="btn-primary flex items-center gap-2 w-full sm:w-auto justify-center"
               >
                 <UtensilsCrossed className="w-5 h-5" />
-                Pedir Online
+                {t('hero.cta_order')}
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -71,7 +73,7 @@ export default function Hero() {
                 href="#productos"
                 className="btn-secondary flex items-center gap-2 w-full sm:w-auto justify-center"
               >
-                Ver Menú
+                {t('hero.cta_menu')}
                 <ChevronRight className="w-5 h-5" />
               </motion.a>
             </div>

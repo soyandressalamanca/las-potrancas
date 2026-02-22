@@ -1,0 +1,114 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "menu": "Menú",
+        "faq": "FAQ",
+        "contact": "Contacto",
+        "order": "Pedir Online"
+    },
+    "hero": {
+        "badge": "Sabor Auténtico en Colorado",
+        "title1": "Las Potrancas",
+        "title2": "Mexican Restaurant",
+        "subtitle": "La mejor comida mexicana en Colorado. Disfruta de nuestro legendario Green Chile y recetas tradicionales que te harán sentir como en casa.",
+        "cta_order": "Pedir Online",
+        "cta_menu": "Ver Menú"
+    },
+    "about": {
+        "badge": "Nuestra Historia",
+        "title": "Un legado familiar cocinado con corazón y pasión.",
+        "p1": "Las Potrancas nació de una conversación entre mi esposa y yo cuando nuestra hija tenía apenas 3 meses de nacida. Me pregunté qué futuro podría construir para mis hijos y entendí que siendo empleado no bastaba.",
+        "p2": "Como cocinero decidí dar el siguiente paso y abrir mi propio restaurante. Hoy, Las Potrancas es el resultado de esa valiente decisión: un negocio con corazón, pasión por la cocina y la visión de dejar un legado familiar.",
+        "specials": {
+            "title": "Especiales Diarios",
+            "desc": "Lunes a Viernes hasta las 3 PM. La mejor opción para tu almuerzo."
+        },
+        "green_chile": {
+            "title": "El mejor Green Chile",
+            "desc": "Nuestro chile verde es reconocido como uno de los mejores de todo Colorado."
+        },
+        "testimonial": "A mi familia le encanta este lugar. Las margaritas son frescas y deliciosas, ¡y toda la comida es fantástica!",
+        "customer": "Maggie, Cliente Satisfecha"
+    },
+    "products": {
+        "badge": "Nuestra Selección",
+        "title": "Productos con",
+        "title_gold": "Sabor Real",
+        "p1": {
+            "title": "Platillos Tradicionales",
+            "desc": "Tacos, enchiladas, tamales, pozole y mole. Recetas que han pasado de generación en generación."
+        },
+        "p2": {
+            "title": "Chile Verde Premium",
+            "desc": "Nuestra especialidad estrella. Un sabor auténtico y picante que define nuestra identidad."
+        },
+        "p3": {
+            "title": "Bebidas y Cocteles",
+            "desc": "Margaritas artesanales, micheladas y bebidas tradicionales para acompañar tu comida."
+        },
+        "p4": {
+            "title": "Paquetes de Catering",
+            "desc": "Llevamos el sabor de Las Potrancas a tus fiestas privadas, empresas y celebraciones familiares."
+        },
+        "cta_box": {
+            "title": "¿Listo para probar el sabor real?",
+            "desc": "Reserva tu mesa ahora y disfruta de la mejor comida mexicana en un ambiente acogedor. ¡Te esperamos!",
+            "btn": "Reservar Ahora"
+        }
+    },
+    "faq": {
+        "badge": "Preguntas Frecuentes",
+        "title": "Resolvemos tus",
+        "title_italic": "dudas",
+        "q1": {
+            "q": "¿Hacen reservas?",
+            "a": "¡Sí! Puedes reservar tu mesa llamándonos directamente o enviándonos un mensaje por WhatsApp. Recomendamos reservar para grupos grandes o fines de semana."
+        },
+        "q2": {
+            "q": "¿Ofrecen servicio de catering?",
+            "a": "Absolutamente. Ofrecemos catering completo para eventos privados, bodas, fiestas familiares y eventos corporativos en toda el área de Arvada y alrededores."
+        },
+        "q3": {
+            "q": "¿Tienen pedidos para llevar?",
+            "a": "Sí, puedes hacer tu pedido por teléfono y pasar a recogerlo. Disfruta del sabor de Las Potrancas en la comodidad de tu hogar."
+        },
+        "q4": {
+            "q": "¿Tienen opciones vegetarianas?",
+            "a": "Contamos con varios platillos que pueden adaptarse a dietas vegetarianas, manteniendo siempre el sabor tradicional mexicano."
+        },
+        "q5": {
+            "q": "¿Atienden eventos empresariales?",
+            "a": "Sí, tenemos paquetes especiales para almuerzos de oficina y reuniones corporativas. Contáctanos para más detalles."
+        }
+    },
+    "contact": {
+        "badge": "Contacto",
+        "title": "Visítanos o",
+        "title_italic": "escríbenos",
+        "p": "Estamos listos para servirte la mejor comida mexicana de Colorado. Ya sea para una cena familiar o un evento especial, estamos aquí para ti.",
+        "form": {
+            "name": "Nombre",
+            "name_placeholder": "Tu nombre",
+            "phone": "Teléfono",
+            "email": "Email",
+            "message": "Mensaje",
+            "message_placeholder": "¿En qué podemos ayudarte?",
+            "btn": "Enviar Mensaje"
+        }
+    },
+    "footer": {
+        "desc": "Auténtica comida mexicana en Colorado. Un legado familiar construido con pasión, sazón tradicional y el mejor chile verde de la región.",
+        "quick_links": "Enlaces Rápidos",
+        "products_title": "Nuestros Productos",
+        "p1": "Tacos & Enchiladas",
+        "p2": "Chile Verde Premium",
+        "p3": "Margaritas Artesanales",
+        "p4": "Catering Empresarial",
+        "p5": "Especiales de Almuerzo",
+        "follow": "Síguenos",
+        "follow_desc": "Mantente al día con nuestras promociones y nuevos platillos.",
+        "rights": "Todos los derechos reservados.",
+        "dev": "Desarrollado por"
+    }
+}

@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   return (
     <section id="contacto" className="section-padding bg-potrancas-black">
       <div className="max-w-7xl mx-auto">
@@ -13,12 +15,12 @@ export default function Contact() {
             viewport={{ once: true }}
             className="flex flex-col items-center lg:items-start text-center lg:text-left"
           >
-            <span className="text-potrancas-gold font-bold tracking-widest uppercase text-xs mb-4 block">Contacto</span>
+            <span className="text-potrancas-gold font-bold tracking-widest uppercase text-xs mb-4 block">{t('contact.badge')}</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-potrancas-cream">
-              Visítanos o <span className="italic text-potrancas-gold">escríbenos</span>
+              {t('contact.title')} <span className="italic text-potrancas-gold">{t('contact.title_italic')}</span>
             </h2>
             <p className="text-potrancas-cream/60 mb-12 max-w-md">
-              Estamos listos para servirte la mejor comida mexicana de Colorado. Ya sea para una cena familiar o un evento especial, estamos aquí para ti.
+              {t('contact.p')}
             </p>
 
             <div className="space-y-8 w-full">
@@ -70,40 +72,40 @@ export default function Contact() {
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">Nombre</label>
-                  <input 
-                    type="text" 
-                    placeholder="Tu nombre"
+                  <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">{t('contact.form.name')}</label>
+                  <input
+                    type="text"
+                    placeholder={t('contact.form.name_placeholder')}
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-potrancas-gold transition-colors text-potrancas-cream"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">Teléfono</label>
-                  <input 
-                    type="tel" 
+                  <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">{t('contact.form.phone')}</label>
+                  <input
+                    type="tel"
                     placeholder="303-000-0000"
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-potrancas-gold transition-colors text-potrancas-cream"
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">Email</label>
-                <input 
-                  type="email" 
+                <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">{t('contact.form.email')}</label>
+                <input
+                  type="email"
                   placeholder="tu@email.com"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-potrancas-gold transition-colors text-potrancas-cream"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">Mensaje</label>
-                <textarea 
+                <label className="text-xs font-bold uppercase tracking-widest text-potrancas-gold">{t('contact.form.message')}</label>
+                <textarea
                   rows={4}
-                  placeholder="¿En qué podemos ayudarte?"
+                  placeholder={t('contact.form.message_placeholder')}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-potrancas-gold transition-colors text-potrancas-cream resize-none"
                 />
               </div>
               <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
-                Enviar Mensaje
+                {t('contact.form.btn')}
                 <Send className="w-4 h-4" />
               </button>
             </form>

@@ -1,0 +1,114 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "menu": "Menu",
+        "faq": "FAQ",
+        "contact": "Contact",
+        "order": "Order Online"
+    },
+    "hero": {
+        "badge": "Authentic Flavor in Colorado",
+        "title1": "Las Potrancas",
+        "title2": "Mexican Restaurant",
+        "subtitle": "The best Mexican food in Colorado. Enjoy our legendary Green Chile and traditional recipes that will make you feel at home.",
+        "cta_order": "Order Online",
+        "cta_menu": "View Menu"
+    },
+    "about": {
+        "badge": "Our History",
+        "title": "A family legacy cooked with heart and passion.",
+        "p1": "Las Potrancas was born from a conversation between my wife and I when our daughter was just 3 months old. I asked myself what future I could build for my children and understood that being an employee was not enough.",
+        "p2": "As a chef I decided to take the next step and open my own restaurant. Today, Las Potrancas is the result of that courageous decision: a business with heart, passion for cooking, and a vision to leave a family legacy.",
+        "specials": {
+            "title": "Daily Specials",
+            "desc": "Monday to Friday until 3 PM. The best choice for your lunch."
+        },
+        "green_chile": {
+            "title": "The Best Green Chile",
+            "desc": "Our green chile is recognized as one of the best in all of Colorado."
+        },
+        "testimonial": "My family loves this place. The margaritas are fresh and delicious, and all the food is fantastic!",
+        "customer": "Maggie, Satisfied Customer"
+    },
+    "products": {
+        "badge": "Our Selection",
+        "title": "Products with",
+        "title_gold": "Real Flavor",
+        "p1": {
+            "title": "Traditional Dishes",
+            "desc": "Tacos, enchiladas, tamales, pozole, and mole. Recipes that have been passed down through generations."
+        },
+        "p2": {
+            "title": "Premium Green Chile",
+            "desc": "Our star specialty. An authentic and spicy flavor that defines our identity."
+        },
+        "p3": {
+            "title": "Drinks and Cocktails",
+            "desc": "Handcrafted margaritas, micheladas, and traditional drinks to accompany your meal."
+        },
+        "p4": {
+            "title": "Catering Packages",
+            "desc": "We bring the flavor of Las Potrancas to your private parties, businesses, and family celebrations."
+        },
+        "cta_box": {
+            "title": "Ready to taste the real flavor?",
+            "desc": "Book your table now and enjoy the best Mexican food in a cozy setting. We look forward to seeing you!",
+            "btn": "Book Now"
+        }
+    },
+    "faq": {
+        "badge": "Frequently Asked Questions",
+        "title": "We solve your",
+        "title_italic": "doubts",
+        "q1": {
+            "q": "Do you take reservations?",
+            "a": "Yes! You can reserve your table by calling us directly or sending us a message via WhatsApp. We recommend booking for large groups or weekends."
+        },
+        "q2": {
+            "q": "Do you offer catering services?",
+            "a": "Absolutely. We offer full catering for private events, weddings, family parties, and corporate events throughout the Arvada area and surroundings."
+        },
+        "q3": {
+            "q": "Do you have take-out orders?",
+            "a": "Yes, you can place your order by phone and pick it up. Enjoy the flavor of Las Potrancas in the comfort of your home."
+        },
+        "q4": {
+            "q": "Do you have vegetarian options?",
+            "a": "We have several dishes that can be adapted to vegetarian diets, always maintaining the traditional Mexican flavor."
+        },
+        "q5": {
+            "q": "Do you cater corporate events?",
+            "a": "Yes, we have special packages for office lunches and corporate meetings. Contact us for more details."
+        }
+    },
+    "contact": {
+        "badge": "Contact",
+        "title": "Visit us or",
+        "title_italic": "write to us",
+        "p": "We are ready to serve you the best Mexican food in Colorado. Whether it's for a family dinner or a special event, we are here for you.",
+        "form": {
+            "name": "Name",
+            "name_placeholder": "Your name",
+            "phone": "Phone",
+            "email": "Email",
+            "message": "Message",
+            "message_placeholder": "How can we help you?",
+            "btn": "Send Message"
+        }
+    },
+    "footer": {
+        "desc": "Authentic Mexican food in Colorado. A family legacy built with passion, traditional seasoning, and the best green chile in the region.",
+        "quick_links": "Quick Links",
+        "products_title": "Our Products",
+        "p1": "Tacos & Enchiladas",
+        "p2": "Premium Green Chile",
+        "p3": "Artisan Margaritas",
+        "p4": "Business Catering",
+        "p5": "Lunch Specials",
+        "follow": "Follow Us",
+        "follow_desc": "Stay up to date with our promotions and new dishes.",
+        "rights": "All rights reserved.",
+        "dev": "Developed by"
+    }
+}

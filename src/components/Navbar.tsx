@@ -1,18 +1,25 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, UtensilsCrossed } from 'lucide-react';
-
-const navLinks = [
-  { name: 'Inicio', href: '#hero' },
-  { name: 'Nosotros', href: '#acerca' },
-  { name: 'Menú', href: 'https://www.laspotrancasmexicanrestaurant.com/menu.html' },
-  { name: 'FAQ', href: '#faq' },
-  { name: 'Contacto', href: '#contacto' },
-];
+import { Menu, X, UtensilsCrossed, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navLinks = [
+    { name: t('nav.home'), href: '#hero' },
+    { name: t('nav.about'), href: '#acerca' },
+    { name: t('nav.menu'), href: 'https://www.laspotrancasmexicanrestaurant.com/menu.html' },
+    { name: t('nav.faq'), href: '#faq' },
+    { name: t('nav.contact'), href: '#contacto' },
+  ];
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +28,8 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const currentLang = i18n.language.split('-')[0];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-3' : 'bg-transparent py-6'}`}>
@@ -49,8 +58,25 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Action Button & Mobile Toggle */}
+        {/* Action Button & Language Toggle & Mobile Toggle */}
         <div className="flex-1 flex justify-end items-center gap-4">
+          {/* Language Switcher Desktop */}
+          <div className="hidden md:flex items-center gap-2 mr-4 text-xs font-bold border-r border-white/10 pr-4">
+            <button
+              onClick={() => changeLanguage('es')}
+              className={`hover:text-potrancas-gold transition-colors ${currentLang === 'es' ? 'text-potrancas-gold' : 'text-white/60'}`}
+            >
+              ES
+            </button>
+            <span className="text-white/20">|</span>
+            <button
+              onClick={() => changeLanguage('en')}
+              className={`hover:text-potrancas-gold transition-colors ${currentLang === 'en' ? 'text-potrancas-gold' : 'text-white/60'}`}
+            >
+              EN
+            </button>
+          </div>
+
           <div className="hidden md:block">
             <a
               href="https://www.foodbooking.com/ordering/?restaurant_uid=9cb8caa1-bc2a-470d-a48d-1a7282f9da80"
@@ -59,12 +85,17 @@ export default function Navbar() {
               className="btn-primary py-2 px-5 text-sm whitespace-nowrap flex items-center gap-2"
             >
               <UtensilsCrossed className="w-4 h-4" />
-              Pedir Online
+              {t('nav.order')}
             </a>
           </div>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-potrancas-gold" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-potrancas-gold flex items-center gap-3" onClick={() => setIsOpen(!isOpen)}>
+            <div className="flex items-center gap-1 text-[10px] font-bold bg-white/5 px-2 py-1 rounded">
+              <span className={currentLang === 'es' ? 'text-potrancas-gold' : 'text-white/40'}>ES</span>
+              <span className="text-white/10">|</span>
+              <span className={currentLang === 'en' ? 'text-potrancas-gold' : 'text-white/40'}>EN</span>
+            </div>
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -81,6 +112,25 @@ export default function Navbar() {
             className="absolute top-full left-0 w-full bg-potrancas-black border-b border-potrancas-cream/10 md:hidden z-50"
           >
             <div className="flex flex-col p-6 gap-4 items-center text-center">
+              {/* Language Switcher Mobile */}
+              <div className="flex items-center gap-6 mb-4 p-3 bg-white/5 rounded-xl w-full justify-center">
+                <button
+                  onClick={() => changeLanguage('es')}
+                  className={`flex items-center gap-2 font-bold ${currentLang === 'es' ? 'text-potrancas-gold' : 'text-white/40'}`}
+                >
+                  <Globe className="w-4 h-4" />
+                  Español
+                </button>
+                <div className="w-px h-4 bg-white/10" />
+                <button
+                  onClick={() => changeLanguage('en')}
+                  className={`flex items-center gap-2 font-bold ${currentLang === 'en' ? 'text-potrancas-gold' : 'text-white/40'}`}
+                >
+                  <Globe className="w-4 h-4" />
+                  English
+                </button>
+              </div>
+
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -95,10 +145,10 @@ export default function Navbar() {
                 href="https://www.foodbooking.com/ordering/?restaurant_uid=9cb8caa1-bc2a-470d-a48d-1a7282f9da80"
                 target="_blank"
                 rel="noreferrer"
-                className="btn-primary text-center flex items-center justify-center gap-2 w-full"
+                className="btn-primary text-center flex items-center justify-center gap-2 w-full mt-2"
               >
                 <UtensilsCrossed className="w-4 h-4" />
-                Pedir Online
+                {t('nav.order')}
               </a>
             </div>
           </motion.div>

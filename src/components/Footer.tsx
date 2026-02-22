@@ -1,6 +1,8 @@
-import { UtensilsCrossed, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { UtensilsCrossed, Instagram, Facebook } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -18,38 +20,38 @@ export default function Footer() {
               />
             </a>
             <p className="text-potrancas-cream/60 text-sm leading-relaxed max-w-xs md:max-w-none">
-              Auténtica comida mexicana en Colorado. Un legado familiar construido con pasión, sazón tradicional y el mejor chile verde de la región.
+              {t('footer.desc')}
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="text-center md:text-left">
-            <h4 className="text-potrancas-gold font-bold uppercase tracking-widest text-xs mb-6">Enlaces Rápidos</h4>
+            <h4 className="text-potrancas-gold font-bold uppercase tracking-widest text-xs mb-6">{t('footer.quick_links')}</h4>
             <ul className="space-y-4 text-sm text-potrancas-cream/50">
-              <li><a href="#hero" className="hover:text-potrancas-gold transition-colors">Inicio</a></li>
-              <li><a href="#acerca" className="hover:text-potrancas-gold transition-colors">Nosotros</a></li>
-              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">Productos</a></li>
-              <li><a href="#faq" className="hover:text-potrancas-gold transition-colors">Preguntas Frecuentes</a></li>
-              <li><a href="#contacto" className="hover:text-potrancas-gold transition-colors">Contacto</a></li>
+              <li><a href="#hero" className="hover:text-potrancas-gold transition-colors">{t('nav.home')}</a></li>
+              <li><a href="#acerca" className="hover:text-potrancas-gold transition-colors">{t('nav.about')}</a></li>
+              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">{t('nav.menu')}</a></li>
+              <li><a href="#faq" className="hover:text-potrancas-gold transition-colors">{t('nav.faq')}</a></li>
+              <li><a href="#contacto" className="hover:text-potrancas-gold transition-colors">{t('nav.contact')}</a></li>
             </ul>
           </div>
 
           {/* Column 3: Products */}
           <div className="text-center md:text-left">
-            <h4 className="text-potrancas-gold font-bold uppercase tracking-widest text-xs mb-6">Nuestros Productos</h4>
+            <h4 className="text-potrancas-gold font-bold uppercase tracking-widest text-xs mb-6">{t('footer.products_title')}</h4>
             <ul className="space-y-4 text-sm text-potrancas-cream/50">
-              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">Tacos & Enchiladas</a></li>
-              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">Chile Verde Premium</a></li>
-              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">Margaritas Artesanales</a></li>
-              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">Catering Empresarial</a></li>
-              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">Especiales de Almuerzo</a></li>
+              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">{t('footer.p1')}</a></li>
+              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">{t('footer.p2')}</a></li>
+              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">{t('footer.p3')}</a></li>
+              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">{t('footer.p4')}</a></li>
+              <li><a href="#productos" className="hover:text-potrancas-gold transition-colors">{t('footer.p5')}</a></li>
             </ul>
           </div>
 
           {/* Column 4: Social Media */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="text-potrancas-gold font-bold uppercase tracking-widest text-xs mb-6">Síguenos</h4>
-            <p className="text-potrancas-cream/50 text-sm mb-6">Mantente al día con nuestras promociones y nuevos platillos.</p>
+            <h4 className="text-potrancas-gold font-bold uppercase tracking-widest text-xs mb-6">{t('footer.follow')}</h4>
+            <p className="text-potrancas-cream/50 text-sm mb-6">{t('footer.follow_desc')}</p>
             <div className="flex gap-4 justify-center md:justify-start">
               <a href="https://www.facebook.com/share/1Bzh7faFVT/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-potrancas-gold hover:text-potrancas-black transition-all border border-white/10">
                 <Facebook className="w-5 h-5" />
@@ -73,10 +75,10 @@ export default function Footer() {
         {/* Second Row: Copyright & Developer */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-potrancas-cream/40 text-xs text-center md:text-left">
-            © {currentYear} <span className="text-potrancas-gold font-semibold">Las Potrancas Mexican Restaurant</span>. Todos los derechos reservados.
+            © {currentYear} <span className="text-potrancas-gold font-semibold">Las Potrancas Mexican Restaurant</span>. {t('footer.rights')}
           </div>
           <div className="text-potrancas-cream/40 text-xs flex items-center gap-1">
-            Desarrollado por <a href="https://syngular.co" target="_blank" rel="noreferrer" className="text-potrancas-gold hover:underline font-medium">Syngular</a>
+            {t('footer.dev')} <a href="https://syngular.co" target="_blank" rel="noreferrer" className="text-potrancas-gold hover:underline font-medium">Syngular</a>
           </div>
         </div>
       </div>
