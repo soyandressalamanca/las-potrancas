@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-potrancas-olive: #887c16;
+  --color-potrancas-gold: #fcbf0e;
+  --color-potrancas-red: #9a2708;
+  --color-potrancas-cream: #f4f0c6;
+  --color-potrancas-darkgold: #985a05;
+  --color-potrancas-black: #0A0A0A;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-potrancas-black text-potrancas-cream font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+.glass-nav {
+  @apply bg-potrancas-black/80 backdrop-blur-md border-b border-potrancas-cream/10;
+}
+
+.btn-primary {
+  @apply bg-potrancas-gold text-potrancas-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-potrancas-darkgold hover:scale-105 active:scale-95 shadow-lg shadow-potrancas-gold/20;
+}
+
+.btn-secondary {
+  @apply border-2 border-potrancas-gold text-potrancas-gold px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-potrancas-gold/10 hover:scale-105 active:scale-95;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-potrancas-gold via-potrancas-cream to-potrancas-olive;
+}
