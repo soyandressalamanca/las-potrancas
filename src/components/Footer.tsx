@@ -78,7 +78,7 @@ export default function Footer() {
             © {currentYear} <span className="text-potrancas-gold font-semibold">Las Potrancas Mexican Restaurant</span>. {t('footer.rights')}
           </div>
           <div className="text-potrancas-cream/40 text-xs flex items-center gap-1">
-            {t('footer.dev')} <a href="https://syngular.co" target="_blank" rel="noreferrer" className="text-potrancas-gold hover:underline font-medium">Syngular</a>
+            {t('footer.dev')} <a href="https://syngular.co" target="_blank" rel="noreferrer" className="text-potrancas-gold hover:underline font-medium">Syngular Air</a>
           </div>
         </div>
       </div>
