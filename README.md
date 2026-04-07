@@ -51,5 +51,30 @@ Este proyecto está configurado para desplegarse automáticamente en **Google Cl
 - `Dockerfile`: Configura el entorno de producción (Nginx) para servir la aplicación.
 - `nginx.conf`: Configuración personalizada para el servidor web.
 
+## 🛠️ Guía Paso a Paso para Nuevos Usuarios
+
+Si es tu primera vez usando Google Cloud, sigue estos pasos para configurar todo desde cero.
+
+### 1. Configuración de Cuenta en Google Cloud
+1. **Crear Cuenta**: Ve a [console.cloud.google.com](https://console.cloud.google.com/) e inicia sesión con tu cuenta de Google.
+2. **Prueba Gratuita**: Google suele ofrecer **$300 en créditos gratuitos** para nuevos usuarios. Asegúrate de activarlos si están disponibles para que el despliegue no tenga costo inicial.
+3. **Activar Facturación (Billing)**: Aunque uses la prueba gratuita, Google requiere vincular una forma de pago para verificar tu identidad. No se te cobrará nada mientras tengas crédito de la prueba gratuita.
+4. **Crear un Proyecto**: Haz clic en el selector de proyectos (arriba a la izquierda) y crea uno nuevo, por ejemplo: `las-potrancas-proyect`.
+
+### 2. Conexión de un Dominio Personalizado
+Una vez que tu sitio esté desplegado en Cloud Run, puedes conectarlo a tu propio dominio (ej. `www.laspotrancas.com`):
+
+1. **Ir a Cloud Run**: En la consola de Google Cloud, busca "Cloud Run" y selecciona tu servicio `las-potrancas`.
+2. **Asignaciones de Dominio**:
+   - Haz clic en **"Gestionar dominios personalizados"** (Manage Custom Domains) en la barra superior.
+   - Haz clic en **"Añadir asignación"** (Add Mapping).
+3. **Verificar Propiedad**:
+   - Si es un dominio nuevo, Google te pedirá verificar que eres el dueño a través de **Google Search Console**.
+   - Deberás añadir un registro **TXT** en la configuración DNS de tu proveedor de dominios (GoDaddy, Namecheap, etc.).
+4. **Configurar Registros DNS**:
+   - Una vez verificado, Google te dará una lista de registros (Tipo A, AAAA o CNAME).
+   - Copia estos valores y pégalos en la zona DNS de tu proveedor de dominios.
+5. **SSL automático**: ¡Listo! Google generará y renovará el certificado de seguridad (HTTPS) automáticamente por ti. La propagación puede tardar hasta 24 horas.
+
 ---
 © 2026 Las Potrancas Mexican Restaurant. Todos los derechos reservados.
